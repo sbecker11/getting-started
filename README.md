@@ -99,7 +99,7 @@ To access the “Hello, World!” application, you need to find the load balance
 
 Look for the EXTERNAL-IP of the hello-world service. Once you have the external IP, open a web browser and navigate to http://EXTERNAL-IP. You should see the “Hello, World!” message displayed.
 
-## Nanaging Your Cluster
+## Managing Your Cluster
 
 In this section, we’ll cover some basic tasks for managing your Kubernetes cluster, such as scaling your application and updating your deployment.  
 
@@ -119,15 +119,9 @@ This command updates the container image in the Deployment, and Kubernetes will 
 
 ### Monitoring Your Cluster
 
-To monitor the status of your cluster, you can use the Kubernetes Dashboard, a web-based user interface for managing your cluster. To access the Dashboard, run the following command:  
+To monitor the status of your cluster, you can use the Kubernetes Dashboard, a web-based user interface for managing your cluster. 
 
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
-
-
-
-
-### Deploy and Access the Kubernetes Dashboard  
-from https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+## [Deploy and Access the Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 
 Dashboard is a web-based Kubernetes user interface. You can use Dashboard to deploy containerized applications to a Kubernetes cluster, troubleshoot your containerized application, and manage the cluster resources. You can use Dashboard to get an overview of applications running on your cluster, as well as for creating or modifying individual Kubernetes resources (such as Deployments, Jobs, DaemonSets, etc). For example, you can scale a Deployment, initiate a rolling update, restart a pod or deploy new applications using a deploy wizard.
 
@@ -141,10 +135,18 @@ The Dashboard UI is not deployed by default. To deploy it, run the following com
 
 
 Accessing the Dashboard UI
-To protect your cluster data, Dashboard deploys with a minimal RBAC configuration by default. Currently, Dashboard only supports logging in with a Bearer Token. To create a token for this demo, you can follow our guide on creating a sample user.
+To protect your cluster data, Dashboard deploys with a minimal role-based access control (RBAC) configuration by default. Currently, Dashboard only supports logging in with a Bearer Token. To create a token for this demo, you can follow our guide on creating a sample user.
 
 Warning: The sample user created in the tutorial will have administrative privileges and is for educational purposes only.
 
+### [How To Create Admin User to Access Kubernetes Dashboard](https://computingforgeeks.com/create-admin-user-to-access-kubernetes-dashboard/)
+
+This page describes the following:  
+Step 1: Create Admin service account  
+Step 2: Create a Cluster Role Binding  
+Step 3: Obtain admin user token  
+Step 4: Accessing Kubernetes Dashboard  
+Step 5: Creating non admin user account  
 
 ### Command line proxy
 You can enable access to the Dashboard using the kubectl command-line tool, by running the following command:
